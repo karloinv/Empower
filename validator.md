@@ -78,7 +78,7 @@ sudo systemctl restart empowerd && sudo journalctl -u empowerd -f -o cat
 ```python
 $request <empower14gn80ue...> circulus-1
 ```
-If the value is false, proceed to creating a validator.
+> If the value is false, proceed to creating a validator.
 ##### Create a validator
 ```python
 empowerd tx staking create-validator \
@@ -102,7 +102,7 @@ empowerd tx staking create-validator \
 ```python
 sudo systemctl stop empowerd
 ```
-###### Upgrade to the latest version
+##### Upgrade to the latest version
 ```python
 cd $HOME/empowerchain
 git pull
