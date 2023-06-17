@@ -7,7 +7,7 @@ After sending the transactions, check its success in explorers. Here are some of
 * https://explorer.stavr.tech/empower
 ***
 ##### Check info node
-```python
+```
 empowerd status 2>&1 | jq .NodeInfo
 ```
 ##### Check synchronization
