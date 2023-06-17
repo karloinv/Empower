@@ -1,6 +1,7 @@
 ##  CLI testing
 
-Tx HASH transactions submit in this <small>[form](https://docs.google.com/forms/d/e/1FAIpQLScmjUZ_VfJ0AgwdI6hl7gp1Ce8UPGe8t28YoMjgN-6FpISvTw/viewform?usp=send_form)
+Tx HASH transactions submit in this <small>[form](https://docs.google.com/forms/d/e/1FAIpQLScmjUZ_VfJ0AgwdI6hl7gp1Ce8UPGe8t28YoMjgN-6FpISvTw/viewform?usp=send_form).
+
 After sending the transactions, check its success in explorers. Here are some of them:
 * https://empower.explorers.guru/
 * https://explorer.stavr.tech/empower
