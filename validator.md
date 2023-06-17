@@ -74,7 +74,7 @@ EOF
 sudo systemctl daemon-reload && sudo systemctl enable empowerd
 sudo systemctl restart empowerd && sudo journalctl -u empowerd -f -o cat
 ```
-##### Go to #faucet channel in Discord and request test tokens in format
+##### Go to <small>[#faucet channel on Discord](https://discord.com/invite/e6FsMT5u) and request test tokens in format
 ```python
 $request <empower14gn80ue...> circulus-1
 ```
