@@ -1,7 +1,7 @@
 ## Empower // Validator Setup
 
 ### Server
-* official requirements 4 CPU / 8 GB RAM / 200 GB SSD
+* recommended requirements 4 CPU / 8 GB RAM / 200 GB SSD
 
 ### Installation the node
 ##### Server preparing
