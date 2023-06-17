@@ -77,7 +77,7 @@ empowerd tx bank send $WALLET1 $WALLET2 <AMOUNT>umpwr --generate-only > tx.json
 ```python
 empowerd tx authz exec tx.json --from $WALLET --fees 300umpwr
 ```
-##### Delete a node
+##### Delete node
 ```python
 sudo systemctl stop empowerd && \
 sudo systemctl disable empowerd && \
