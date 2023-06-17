@@ -10,7 +10,7 @@ sudo apt update && sudo apt upgrade -y && \
 sudo apt install curl tar wget clang pkg-config libssl-dev libleveldb-dev jq build-essential bsdmainutils git make ncdu htop screen unzip bc fail2ban htop -y
 ```
 ##### Install Go
-```python
+```bash
 ver="1.20" && \
 wget "https://golang.org/dl/go$ver.linux-amd64.tar.gz" && \
 sudo rm -rf /usr/local/go && \
@@ -21,7 +21,7 @@ source $HOME/.bash_profile && \
 go version
 ```
 ##### Download the binary file
-```python
+```bash
 Download the binary file
 git clone https://github.com/EmpowerPlastic/empowerchain
 cd empowerchain
@@ -30,29 +30,29 @@ cd chain
 make install
 ```
 ##### Initialize node (change “f5nodes” when configuring)
-```python
+```bash
 empowerd init f5nodes --chain-id circulus-1 && \
 empowerd config chain-id circulus-1
 ```
 ##### Create wallet for node (change “f5nodes” when configuring)
 * Create a new key
-```python
+```bash
 empowerd keys keys add f5nodes
 ```
 * Restore an existing key using a mnemonic (optional)
-```python
+```bash
 empowerd keys keys add f5nodes --recover
 ```
 ##### Download genesis
-```python
+```bash
 wget https://raw.githubusercontent.com/karloinv/Empower/main/genesis.json -O $HOME/.archway/config/genesis.json
 ```
 ##### Download addrbook
-```python
+```bash
 wget -O $HOME/.archway/config/addrbook.json "https://raw.githubusercontent.com/karloinv/Empower/main/addrbook.json"
 ```
 ##### Create a service file
-```python
+```bash
 sudo tee /etc/systemd/system/empowerd.service > /dev/null <<EOF
 [Unit]
 Description=EmpowerChain Node
@@ -70,17 +70,17 @@ WantedBy=multi-user.target
 EOF
 ```
 ##### Start the node
-```python
+```bash
 sudo systemctl daemon-reload && sudo systemctl enable empowerd
 sudo systemctl restart empowerd && sudo journalctl -u empowerd -f -o cat
 ```
 ##### Go to <small>[#faucet channel on Discord](https://discord.com/invite/e6FsMT5u) and request test tokens in format
-```python
+```bash
 $request <empower14gn80ue...> circulus-1
 ```
 > If the value is false, proceed to creating a validator.
 ##### Create a validator
-```python
+```bash
 empowerd tx staking create-validator \
   --amount=5000000umpwr \
   --pubkey=$(empowerd tendermint show-validator) \
@@ -99,22 +99,22 @@ empowerd tx staking create-validator \
 ***
 ### Update
 ##### Stop the node
-```python
+```bash
 sudo systemctl stop empowerd
 ```
 ##### Upgrade to the latest version
-```python
+```bash
 cd $HOME/empowerchain
 git pull
 git checkout v1.0.0-rc3
 make build
 ```
 ##### Start the node
-```python
+```bash
 systemctl restart empowerd
 systemctl restart empowerd
 ```
 ##### Check logs
-```python
+```bash
 journalctl -u empowerd -f -o cat
 ```
